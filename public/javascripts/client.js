@@ -20,6 +20,7 @@ function startRecording() {
             socket.emit('send_pcm', voice.buffer)
         }
     }).catch((e) => {
+        alert(e)
         // "DOMException: Rrequested device not found" will be caught if no mic is available
         console.log(e)
     })
